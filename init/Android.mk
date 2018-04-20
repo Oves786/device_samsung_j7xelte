@@ -31,3 +31,4 @@ LOCAL_MODULE := libinit_sec
 include $(BUILD_STATIC_LIBRARY)
 
 endif
+

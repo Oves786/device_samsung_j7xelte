@@ -44,4 +44,3 @@ static const variant *all_variants[TOTAL_VARIANTS] = {
 };
 
 #endif // INIT_SEC_H
-
