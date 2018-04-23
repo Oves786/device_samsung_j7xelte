@@ -1,1 +1,1 @@
-add_lunch_combo cos_j7xelte-userdebug
+add_lunch_combo carbon_j7xelte-userdebug

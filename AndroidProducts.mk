@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/cardinal.mk  
+    $(LOCAL_DIR)/carbon_j7xelte.mk  
