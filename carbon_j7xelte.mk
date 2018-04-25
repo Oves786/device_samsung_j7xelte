@@ -1,3 +1,4 @@
+
 #
 # Copyright 2018 The Android Open Source Project
 #
@@ -13,31 +14,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-# Inherit from those products. Most specific first.
-$(call inherit-product, device/samsung/j7xelte/device.mk)
-
 # Inherit some common AOSP stuff.
 TARGET_ARCH := arm
 TARGET_DENSITY := xhdpi
 TARGET_BOOT_ANIMATION_RES := 720
-#$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# Inherit from oneplus3 device
+$(call inherit-product, device/samsung/j7xelte/device.mk)
+# Inherit some common Carbon stuff.
 $(call inherit-product, vendor/carbon/config/common.mk)
-
-# Inherit Carbon GSM telephony parts
-$(call inherit-product, vendor/carbon/config/gsm.mk)
-
-
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := carbon_j7xelte
 BOARD_VENDOR := samsung
 PRODUCT_DEVICE := j7xelte
 PRODUCT_BRAND := samsung
-
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
-
 PRODUCT_BUILD_PROP_OVERRIDES += \
         PRIVATE_BUILD_DESC="j7xeltexx-user 7.0 NRD90M J710FXXU4BRA1 release-keys"
-	BUILD_FINGERPRINT=samsung/j7xeltexx/j7xelte:7.0/NRD90M/J710FXXU4BRA1:user/release-keys
-
+        BUILD_FINGERPRINT=samsung/j7xeltexx/j7xelte:7.0/NRD90M/J710FXXU4BRA1:user/release-keys
