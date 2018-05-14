@@ -56,6 +56,11 @@ void vendor_load_properties()
         name = "j7xeltedd";
     }
 
+    // fingerprint
+    property_override("ro.build.description", "j7xeltexx-user 7.0 NRD90M J710FXXU4BRA1 release-keys");
+    property_override("ro.build.fingerprint", "samsung/j7xeltexx/j7xelte:7.0/NRD90M/J710FXXU4BRA1:user/release-keys");
+
+
 
     LOG(INFO) << "Found bootloader: %s", bootloader.c_str();
     LOG(INFO) << "Setting ro.product.model: %s", model.c_str();
