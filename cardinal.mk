@@ -20,14 +20,14 @@ $(call inherit-product, device/samsung/j7xelte/device.mk)
 # Inherit from those products. Most specific first
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Cardinal stuff.
+$(call inherit-product, vendor/cardinal/common.mk)
 
 # Device identifier
-PRODUCT_NAME := lineage_j7xelte
-BOARD_VENDOR := samsung
+PRODUCT_NAME := cardinal_j7xelte
 PRODUCT_DEVICE := j7xelte
 PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 PRODUCT_BUILD_PROP_OVERRIDES += \
         PRIVATE_BUILD_DESC="j7xeltexx-user 7.0 NRD90M J710FXXU4BRA1 release-keys"
